@@ -5,7 +5,7 @@ import RecurringBills from "../components/RecurringBills";
 
 const Overview = () => {
   return (
-    <div className=" p-[10px]">
+    <div className="p-[10px] mx-2">
       <div>
         <div className="mb-3 font-bold text-[20px] sm:mx-1">
           <h1>Overview</h1>
@@ -25,7 +25,7 @@ const Overview = () => {
           </div>
         </div>
       </div>
-      <div className="lg:flex lg:flex-row lg:gap-10 lg:items-center lg:justify-center">
+      <div className="lg:flex lg:flex-row lg:gap-2 lg:items-center lg:justify-center xl:justify-around">
       <div className="lg:flex lg:flex-col  lg:justify-start">
         <div>
           <Pots />

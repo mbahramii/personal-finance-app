@@ -6,7 +6,7 @@ import { GrMoney } from "react-icons/gr";
 
 const SideBar = () => {
   return (
-    <div className="flex gap-10 bg-neutral-600 items-start h-screen fixed left-0 text-white lg:flex-col p-12">
+    <div className="h-screen flex gap-10 bg-neutral-600 items-start text-white lg:flex-col p-12 pb-96">
       {/* <Link to="/home"> */}
       <div className="flex flex-row gap-2 items-end justify-end">
         <MdHome className=" w-6 h-6 text-white hover:text-blue-400 transition" />
