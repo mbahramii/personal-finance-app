@@ -3,23 +3,23 @@ import { BiTransfer } from "react-icons/bi";
 import { GrAnalytics } from "react-icons/gr";
 import { PiReceiptLight } from "react-icons/pi";
 import { GrMoney } from "react-icons/gr";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
     <div className="w-full flex gap-10 justify-center bg-neutral-600 rounded-t-xl h-[50px] items-center fixed bottom-0 text-white lg:flex-col">
-      {/* <Link to="/home"> */}
+      <Link to="/">
       <div className="flex flex-col text-center items-center">
         <MdHome className=" w-6 h-6 text-white hover:text-blue-400 transition" />
         <h1 className="hidden sm:block ">Overview</h1>
       </div>
-      {/* </Link> */}
-      {/* <Link to="/transfer"> */}
+      </Link>
+      <Link to="/Transactionspage">
       <div className="flex flex-col items-center">
-
         <BiTransfer className="rotate-90 w-6 h-6 text-white hover:text-blue-400 transition" />
         <h1 className="hidden sm:block ">Transaction</h1>
       </div>
-      {/* </Link> */}
+      </Link>
       {/* <Link to="/analytics"> */}
       <div className="flex flex-col items-center">
 
