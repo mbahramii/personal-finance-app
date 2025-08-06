@@ -1,8 +1,12 @@
 import { useState } from "react";
+import { useTransactions } from "./TransactionsProvider";
 
 
 // Component for adding new transactions
-const AddTransActions = ({ onAdd }) => {
+const AddTransActions = () => {
+    // Get the addTransaction function from context to update transactions list
+ const { addTransaction } = useTransactions();
+
 
   // Controls whether the form is shown or hidden
   const [showForm, setShowForm] = useState(false);
@@ -13,11 +17,12 @@ const AddTransActions = ({ onAdd }) => {
 
 
    // Handle form submission
-  const addTransaction = (e) => {
+  const handleSubmit= (e) => {
     e.preventDefault();
 
     // Create a new transaction object from form values
     const transaction = {
+      id: Date.now(),
       name: e.target.name.value,
       amount: e.target.amount.value,
       date: e.target.date.value,
@@ -25,7 +30,8 @@ const AddTransActions = ({ onAdd }) => {
       type: e.target.type.value,
     };
 
-    onAdd(transaction);
+ // Add the new transaction to the global state via context
+    addTransaction(transaction);
     e.target.reset();
     setShowForm(false);
   };
@@ -44,7 +50,7 @@ const AddTransActions = ({ onAdd }) => {
 
         {showForm && (
           <form
-            onSubmit={addTransaction}
+            onSubmit={handleSubmit}
             className="flex flex-col justify-center  p-[10px] rounded-lg mt-2 space-y-2 bg-[#ffdba5] sm:flex-row  sm:gap-2"
           >
             <input
