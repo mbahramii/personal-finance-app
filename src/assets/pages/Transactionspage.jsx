@@ -2,6 +2,7 @@ import { useState } from "react";
 import TransactionsList from "../components/TransactionsList";
 import { useTransactions } from "../components/TransactionsProvider";
 import AddTransActions from "../components/addTransaction";
+import BalanceSummary from "../components/BalanceSummary";
 
 const Transactionspage = () => {
 
@@ -9,7 +10,8 @@ const Transactionspage = () => {
   // Get transactions data (list of transactions) and addTransaction function from the Context
   const { transactions, addTransaction } = useTransactions();
   return (
-    <div className=" w-[100%] flex flex-col">
+    <div className=" w-[100%] flex flex-col pt-2">
+      <BalanceSummary /> 
       <AddTransActions />
       <TransactionsList />
     </div>
