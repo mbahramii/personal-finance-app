@@ -26,8 +26,8 @@ const Overviewpage = () => {
         </div>
         <BalanceSummary />
       </div>
-      <div className="lg:flex lg:flex-row lg:gap-2 lg:items-center lg:justify-center xl:justify-around">
-      <div className="lg:flex lg:flex-col  lg:justify-start">
+      <div className="lg:flex lg:flex-row lg:gap-2 lg:items-start lg:justify-strart xl:justify-center">
+      <div className="lg:flex lg:flex-col lg:justify-start">
         <div>
           <Pots />
         </div>

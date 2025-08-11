@@ -3,7 +3,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 
 const Pots =()=>{
 return(
-    <div className="bg-white p-5 rounded-xl">
+    <div className="bg-white p-5 rounded-xl mt-10">
             <div className="flex justify-between ">
               <p className="text-black">Pots</p>
               <div className="flex items-center text-gray">
