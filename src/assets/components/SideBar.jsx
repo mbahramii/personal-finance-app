@@ -10,7 +10,8 @@ const location = useLocation();
 const isActive = (path) => location.pathname === path;
 
   return (
-    <div className="h-screen flex gap-10 bg-neutral-600 items-start text-white lg:flex-col p-12 pb-96">
+    <div className="h-screen flex gap-5 bg-neutral-600 items-start justify-start text-white lg:flex-col pt-5 px-2
+     pb-96 fixed bottom-0 ">
       <Link to="/">
       <div className={`flex flex-row gap-2 items-end justify-end ${
     isActive("/") ? "text-blue-400" : "text-white hover:text-blue-400"
