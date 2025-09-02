@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useTransactions } from "./TransactionsProvider";
 
-
 // Component for adding new transactions
 const AddTransActions = () => {
-    // Get the addTransaction function from context to update transactions list
- const { addTransaction } = useTransactions();
-
+  // Get the addTransaction function from context to update transactions list
+  const { addTransaction } = useTransactions();
 
   // Controls whether the form is shown or hidden
   const [showForm, setShowForm] = useState(false);
@@ -15,9 +13,8 @@ const AddTransActions = () => {
     setShowForm(true);
   };
 
-
-   // Handle form submission
-  const handleSubmit= (e) => {
+  // Handle form submission
+  const handleSubmit = (e) => {
     e.preventDefault();
 
     // Create a new transaction object from form values
@@ -30,7 +27,7 @@ const AddTransActions = () => {
       type: e.target.type.value,
     };
 
- // Add the new transaction to the global state via context
+    // Add the new transaction to the global state via context
     addTransaction(transaction);
     e.target.reset();
     setShowForm(false);
@@ -41,41 +38,41 @@ const AddTransActions = () => {
       <div>
         {!showForm && (
           <button
-            className="bg-gray-200 px-3 py-1 rounded hover:bg-gray-300"
+            className="bg-gray px-3 py-1 rounded  hover:bg-gray-300"
             onClick={toggleForm}
           >
-            +
+            Add transactions
           </button>
         )}
 
         {showForm && (
           <form
             onSubmit={handleSubmit}
-            className="flex flex-col justify-center  p-[10px] rounded-lg mt-2 space-y-2 bg-[#ffdba5] sm:flex-row  sm:gap-2"
+            className=" flex flex-col justify-center items-center mx-auto p-[10px] rounded-lg mt-2 space-y-2 w-[310px] sm:w-[500px]  bg-[#ffdba5] sm:gap-2"
           >
             <input
               type="text"
               name="name"
               placeholder="name"
-              className="border p-1 sm:w-[100px] rounded-lg "
+              className="border p-1 sm:w-[90%] rounded-lg "
               required
             />
             <input
               name="amount"
               type="number"
               placeholder="Amount"
-              className="border p-1 sm:w-[100px] rounded-lg "
+              className="border p-1 sm:w-[90%] rounded-lg "
               required
             />
             <input
-              className="rounded-lg p-1 sm:w-[100px]"
+              className="rounded-lg p-1 sm:w-[90%]"
               type="date"
               name="date"
               required
             />
             <select
               name="type"
-              className="border p-2 w-full rounded-lg sm:w-[100px] bg-white text-black"
+              className="border p-2 w-full rounded-lg sm:w-[90%] bg-white text-black"
               required
             >
               <option value="">Select transaction type</option>
@@ -86,12 +83,11 @@ const AddTransActions = () => {
               type="text"
               name="description"
               placeholder="Description"
-              className="border p-1 w-full rounded-lg sm:w-[100px]" 
-              required
+              className="border p-1 w-full rounded-lg sm:w-[90%]"
             />
             <button
               type="submit"
-              className="bg-white text-amber-900 font-bold py-2 rounded-lg hover:bg-gray-100 transition sm:w-[100px]"
+              className="bg-white text-amber-900 font-bold py-2 rounded-lg hover:bg-gray-100 transition sm:w-[90%]"
             >
               Add
             </button>
