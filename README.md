@@ -1,12 +1,61 @@
-# React + Vite
+# 💰 Personal Finance App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A personal finance management application built with **React 19**, **Vite**, and **Tailwind CSS**.  
+It allows users to track their balance, budgets, recurring bills, transactions, and savings (Pots).
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 📷 Preview
+### Desktop
+![Desktop Screenshot](./screenshots/laptop.jpg)
 
-## Expanding the ESLint configuration
+### Tablet
+![Tablet Screenshot](./screenshots/tablet.jpg)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Mobile
+![Mobile Screenshot](./screenshots/mobile.jpg)
+
+---
+
+## 🚀 Tech Stack
+
+### Main Dependencies
+-  **React 19.1.0**
+-  **React DOM 19.1.0**
+-  **React Router DOM 7.7.1** (routing)
+-  **React Icons 5.5.0** (icon library)
+-  **Recharts 3.1.2** (charts & graphs)
+
+### Dev Dependencies
+- ⚡ **Vite 7.0.4** (build tool)
+- 🎨 **Tailwind CSS 3.4.17**
+- 🔧 **ESLint 9.30.1** with React hooks & refresh plugins
+- ✨ **PostCSS 8.5.6** + **Autoprefixer 10.4.21**
+
+---
+
+
+
+## ✨ Features
+- Display **current balance, income, and expenses**
+- Manage **Pots** (savings goals)
+- Budget section with **interactive pie chart**
+- Recent transactions list
+- Recurring bills overview
+- Fully **responsive design** (mobile, tablet, desktop)
+
+---
+
+## ⚙️ Installation & Setup
+```bash
+# Clone the repository
+git clone https://github.com/USERNAME/personal-finance-app.git
+
+# Navigate into the project folder
+cd personal-finance-app
+
+# Install dependencies
+npm install
+
+# Start the development server
+npm run dev
