@@ -19,14 +19,14 @@ const Overviewpage = () => {
 
 
   return (
-    <div className="p-[10px] mx-2">
+    <div className="p-[10px] xl:mx-auto" >
       <div>
         <div className="mb-3 font-bold text-[20px] sm:mx-1">
           <h1>Overview</h1>
         </div>
         <BalanceSummary />
       </div>
-      <div className="lg:flex lg:flex-row lg:gap-2 lg:items-start lg:justify-strart xl:justify-center">
+      <div className="lg:flex lg:flex-row lg:gap-2 lg:items-start lg:justify-strart ">
       <div className="lg:flex lg:flex-col lg:justify-start">
         <div>
           <Pots />
