@@ -1,8 +1,11 @@
 import { IoMdArrowDropright } from "react-icons/io";
-import { useTransactions } from "./TransactionsProvider";
+import { useSelector } from "react-redux";
+// import { useTransactions } from "./TransactionsProvider";
+
 
 const TransactionsList = () => {
-  const { transactions } = useTransactions();
+ // Get transaction array from redux store
+  const transactions = useSelector((state) => state.transactions);
   
   return (
     <div className="bg-white p-5 rounded-xl mt-10">

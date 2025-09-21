@@ -1,11 +1,10 @@
-import {TransactionsProvider , useTransactions } from "../components/TransactionsProvider";
-
+import { useSelector } from "react-redux";
 
 const BalanceSummary = ()=>{
-  const { transactions } = useTransactions();
+    const transactions = useSelector((state)=>state.transactions)
+
 
   const CurrentBalance = transactions.reduce((total , tx)=>{
-
     if (tx.type === "deposit"){
         return total + Number(tx.amount);
     }else{

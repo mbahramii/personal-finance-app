@@ -1,10 +1,11 @@
 import { useState } from "react";
-import { useTransactions } from "./TransactionsProvider";
-
+import { useSelector } from "react-redux";
+import { useDispatch} from "react-redux";
+import { addTransaction } from "../../store/transactionsSlice";
 // Component for adding new transactions
 const AddTransActions = () => {
-  // Get the addTransaction function from context to update transactions list
-  const { addTransaction } = useTransactions();
+  // Get transaction array from redux store
+  const transactions = useSelector((state) => state.transactions);
 
   // Controls whether the form is shown or hidden
   const [showForm, setShowForm] = useState(false);
@@ -13,6 +14,7 @@ const AddTransActions = () => {
     setShowForm(true);
   };
 
+  const dispatch = useDispatch()
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -28,7 +30,7 @@ const AddTransActions = () => {
     };
 
     // Add the new transaction to the global state via context
-    addTransaction(transaction);
+    dispatch(addTransaction(transaction));
     e.target.reset();
     setShowForm(false);
   };

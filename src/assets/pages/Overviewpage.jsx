@@ -2,15 +2,13 @@ import Pots from "../components/Pots";
 import Budgets from "../components/Budgets";
 import RecurringBills from "../components/RecurringBills";
 import TransactionsList from "../components/TransactionsList";
-import {TransactionsProvider , useTransactions } from "../components/TransactionsProvider";
 import BalanceSummary from "../components/BalanceSummary";
-
+import { useSelector } from "react-redux";
 
 const TransactionsSection = () => {
   
-  // Get transactions from context
-  const { transactions } = useTransactions();
-
+   // Get transaction array from redux store
+ const transactions = useSelector((state) => state.transactions);
   return <TransactionsList transactions={transactions} />;
 };
 
