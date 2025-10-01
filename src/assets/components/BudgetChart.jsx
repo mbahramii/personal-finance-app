@@ -5,8 +5,8 @@ const BudgetChart = ({ data=[]}) => {
   const totalSpent = data.reduce((sum, item) => sum + item.value, 0);
 
   return (
-    <div className="p-4  rounded-xl flex flex-col sm:flex-row sm:items-center ">
-      <div className=" w-[200px] flex justify-center items-center ">
+    <div className="p-4 min-w-[300px]  rounded-xl flex flex-col sm:flex-row sm:items-center ">
+      <div className=" w-[300px] flex justify-center items-center m-auto">
         <PieChart width={200} height={200}>
           <Pie
             data={data}
@@ -27,9 +27,9 @@ const BudgetChart = ({ data=[]}) => {
         </div>
       </div>
 
-      <div className="mt-4 gap-y-2">
+      <div className="mt-4 w-[320px] flex flex-wrap gap-3">
         {data.map((item, index) => (
-          <div key={index} className="flex items-center space-x-2">
+          <div key={index} className="min-w-[100px] flex justify-center items-center space-x-1">
             <div
               className="w-1 h-4 rounded-full"
               style={{ backgroundColor: item.color }}

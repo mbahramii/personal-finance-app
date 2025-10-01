@@ -5,6 +5,7 @@ import Overviewpage from "./assets/pages/Overviewpage"
 import Transactionspage from "./assets/pages/Transactionspage"
 import { Provider } from "react-redux";
 import { store } from "./store/store";
+import BudgetsPage from "./assets/pages/BudgetsPage"
 
 
 function App() {
@@ -20,6 +21,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Overviewpage/>} />
         <Route path="/Transactionspage" element={<Transactionspage/>} />
+        <Route path="/BudgetsPage" element={<BudgetsPage/>} />
+
       </Routes>
       <div  className="block lg:hidden">
       <Footer/>

@@ -28,12 +28,12 @@ const isActive = (path) => location.pathname === path;
         <h1 className="">Transactions</h1>
       </div>
       </Link>
-      {/* <Link to="/analytics"> */}
+       <Link to="/BudgetsPage">
       <div className="flex flex-row gap-2 items-end justify-end">
         <GrAnalytics className="w-6 h-6 text-white hover:text-blue-400 transition" />
         <h1 className="">Budgets</h1>
       </div>
-      {/* </Link> */}
+      </Link>
       {/* <Link to="/income"> */}
       <div className="flex flex-row gap-2 items-end justify-end">
         <GrMoney className="w-6 h-6 text-white hover:text-blue-400 transition" />

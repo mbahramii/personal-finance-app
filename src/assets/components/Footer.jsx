@@ -28,13 +28,13 @@ return (
         <h1 className="hidden sm:block ">Transaction</h1>
       </div>
       </Link>
-      {/* <Link to="/analytics"> */}
+      <Link to="/BudgetsPage">
       <div className="flex flex-col items-center">
 
         <GrAnalytics className="w-6 h-6 text-white hover:text-blue-400 transition" />
         <h1 className="hidden sm:block ">Budgets</h1>
       </div>
-      {/* </Link> */}
+      </Link>
       {/* <Link to="/income"> */}
       <div className="flex flex-col items-center">
 
